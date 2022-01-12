@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" autoUpload="Always" serverName="Raspberry Pi" remoteFilesAllowedToDisappearOnAutoupload="false">
+    <serverData>
+      <paths name="Raspberry Pi">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/ET0735/Lab4/src" local="$PROJECT_DIR$/src" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+    <option name="myAutoUpload" value="ALWAYS" />
+  </component>
+</project>
