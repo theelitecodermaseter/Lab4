@@ -2,14 +2,14 @@ import time
 import RPi.GPIO as GPIO #import RPi.GPIO module
 
 
-def hal_buz_init():
+def init():
     from time import sleep  # used to create delays0.5
     GPIO.setmode(GPIO.BCM)  # choose BCM mode
     GPIO.setwarnings(False)
     GPIO.setup(18, GPIO.OUT)  # set GPIO 18 as output
 
 
-def hal_buz_deinit():
+def deinit():
     PWM = GPIO.PWM(18, 0)
 
     PWM.stop()
@@ -17,7 +17,7 @@ def hal_buz_deinit():
 
 
 
-def hal_buz_short_beep(beep_interval):
+def short_beep(beep_interval):
 
     #Set PWM frequency to 100Hz
     PWM = GPIO.PWM(18, 5000)

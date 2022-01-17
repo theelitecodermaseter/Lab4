@@ -1,10 +1,45 @@
+#System imports
 import socket
-
-import hal_lcd
+import time
 from time import sleep
 
+#Local imports
+import hal_lcd
 import hal_buzzer
+import hal_led as led
+import hal_servo as servo
+import hal_dc_motor as dc_motor
 
+def blink_led():
+    #Led Blink
+    led.init()
+
+    led.set_output(0, 1)
+    time.sleep(0.5)
+
+    led.set_output(0, 0)
+    time.sleep(0.5)
+
+    led.set_output(0, 1)
+    time.sleep(0.5)
+
+    led.set_output(0, 0)
+    time.sleep(0.5)
+
+def rotate_servo():
+    servo.init()
+
+
+    for i in range(0, 180, 5):
+        servo.set_servo_position(i)
+        sleep(0.05)
+
+
+def test_motor():
+    dc_motor.init()
+    dc_motor.set_motor_speed(100)
+
+    sleep(2)
 
 def main():
     #Instantiate and initialize the LCD driver
@@ -33,8 +68,17 @@ def main():
 
 
     #Buzzer beep
-    hal_buzzer.hal_buz_init()
-    hal_buzzer.hal_buz_short_beep(0.1)
+    hal_buzzer.init()
+    hal_buzzer.short_beep(0.1)
+
+    blink_led()
+
+    rotate_servo()
+
+    test_motor()
+
+
+
 
 
 #Main entry point
