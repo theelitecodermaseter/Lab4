@@ -14,7 +14,7 @@ from hal import hal_lcd as LCD
 from hal import hal_dc_motor as dc_motor
 from hal import hal_buzzer as buzzer
 from hal import hal_servo as servo
-
+import version as ver
 
 def blink_led():
     # Led Blink
@@ -59,8 +59,8 @@ def main():
     lcd.backlight(1)  # turn backlight on
 
     lcd.lcd_clear()
-    lcd.lcd_display_string("Hi welcome to", 1)  # write on line 1
-    lcd.lcd_display_string("DevOps for AIoT", 2)  # write on line 2
+    lcd.lcd_display_string("DevOps for AIoT", 1)  # write on line 1
+    lcd.lcd_display_string("Rel = " + ver.rel_ver, 2)  # write on line 2
     # starting on 3rd column
 
     sleep(2)  # wait 2 sec
