@@ -1,18 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" autoUpload="Always" serverName="Raspberry Pi" remoteFilesAllowedToDisappearOnAutoupload="false">
+  <component name="PublishConfigData" autoUpload="Always" remoteFilesAllowedToDisappearOnAutoupload="false">
     <serverData>
-      <paths name="Raspberry Pi">
-        <serverdata>
-          <mappings>
-            <mapping deploy="/ET0735/Lab4/src" local="$PROJECT_DIR$/src" />
-          </mappings>
-        </serverdata>
-      </paths>
       <paths name="pi@192.168.0.100:22">
         <serverdata>
           <mappings>
-            <mapping deploy="/home/pi/ET0735/Lab4 " local="$PROJECT_DIR$" />
+            <mapping deploy="ET0735/Lab4 " local="$PROJECT_DIR$" />
           </mappings>
         </serverdata>
       </paths>
